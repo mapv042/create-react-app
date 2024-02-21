@@ -1,9 +1,12 @@
+:root {
+    --dark-color: #010113;
+  }
+
 body{
-   
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0b1522;
+    background: var(--dark-color);
 }
 
 
@@ -14,10 +17,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0b1522;
+    background: var(--dark-color);
 }
 
-.heart {
+.big-heart {
     height: 10rem;
     width: 10rem;
     background-color:#FF9BF1;
@@ -50,7 +53,7 @@ h2 { color : white
         transform: rotate(45deg) scale(0.8);
     } 
 }
-.heart::before{
+.big-heart::before{
     content: "";
     position: absolute;
     height: 10rem;
@@ -60,7 +63,7 @@ h2 { color : white
     border-radius: 50%;
     box-shadow: 10px  20px 10rem #FF9BF1;
 }
-.heart::after{
+.big-heart::after{
     content: "";
     position: absolute;
     height: 10rem;
