@@ -41,7 +41,7 @@ const HeartLetter = () => {
           <div class="front flap"></div>
           <div class="front pocket"></div>
           <div class="letter">
-            <div className="letter-text">Buenos Días Annie, esto es solo para recordarte que me encantas y te quiero vario vario, que tengas bonito día</div>
+            <div className="letter-text">Buenos días Annie, esto es solo para recordarte que me encantas y que te quiero vario vario, que tengas bonito día</div>
           </div>
           <div class="hearts">
             <div class="heart a1"></div>
