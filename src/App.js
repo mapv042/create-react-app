@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./styles.css";
 import AppFlowers from "./AppFlowers";
+import HeartLetter from "./heartLetter";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 const GoodMorning = (props) => {
   const today = new Date();
@@ -25,7 +28,7 @@ const GoodMorning = (props) => {
   );
 };
 
-const App = () => {
+const App2 = () => {
   const [state, setState] = useState(0);
 
   useEffect(() => {
@@ -39,4 +42,16 @@ const App = () => {
   }
 };
 
+
+
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<App2 />} />
+        <Route path="/heart-letter" element={<HeartLetter />} />
+      </Routes>
+    </Router>
+  );
+};
 export default App;
