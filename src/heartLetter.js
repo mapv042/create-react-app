@@ -14,15 +14,15 @@ const HeartLetter = () => {
 
 
     const handleClick = (action) => {
-        if (action === 'open') {
-            if (!isOpen) {
-                setIsOpen(true);
-            }
-        } else {
+            
             if (isOpen) {
                 setIsOpen(false);
+                pauseAudio();
+            } else{
+              setIsOpen(true)
+              playAudio()
             }
-        }
+        
     };
 
     const playAudio = () => {
@@ -37,7 +37,7 @@ const HeartLetter = () => {
   return (
     <div >
       <div class="envlope-wrapper">
-        <div id="envelope" className={isOpen ? 'open' : 'close'}>
+        <div id="envelope" className={isOpen ? 'open' : 'close'} onClick={handleClick}>
           <div class="front flap"></div>
           <div class="front pocket"></div>
           <div class="letter">
@@ -54,8 +54,7 @@ const HeartLetter = () => {
         <source src={consentida} type="audio/mp3" />
       </audio>
       <div class="reset">
-        <button id="open" onClick={() => { handleClick('open'); playAudio(); }}>Abrir</button>
-        <button id="reset" onClick={() => { handleClick('close'); pauseAudio(); }}>Cerrar</button>
+        
       </div>
     </div>
   );
