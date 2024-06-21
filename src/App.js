@@ -6,6 +6,10 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 const GoodMorning = (props) => {
+  useEffect(() => {
+    document.body.style.backgroundColor = '#010113'; // Cambia el color de fondo al montar este componente
+  }, []);
+
   const today = new Date();
   const curHr = today.getHours();
 
